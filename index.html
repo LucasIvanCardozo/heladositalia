@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Meta mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Sheet description-->
+    <title>Helados Italia</title>
+    <meta name="author" content="Lucas Cardozo" />
+    <meta
+      name="description"
+      content="Entra y podrás realizar tu pedido de helado a cualquiera de nuestras sucursales! No te arrepentirás..."
+    />
+    <!--Styles CSS-->
+    <link rel="shortcut icon" href="Images/Logo/Logo_Italia.svg" />
+    <link rel="stylesheet" href="Css/normalize.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+    <!--<link rel="stylesheet" href="chargeStyle.css" />-->
+    <link rel="stylesheet" href="Css/shopStyle.css" />
+  </head>
+  <body id="body" class="block-scroll">
+    <audio src="Audio/Music.mp3" loop class="audio"></audio>
+    <nav class="nav">
+      <div class="nav__background"></div>
+      <div class="flavors__container">
+        <input class="flavors__button" type="button" value="Agregar" />
+      </div>
+      <div class="cart">
+        <h2 class="cart__titulo"><i>Pedido</i></h2>
+        <ul class="cart__ul"></ul>
+        <div class="cart__total">
+          <div class="cart__total-send-price">
+            <p class="cart__total-send-price-p">
+              Envío: $<span class="cart__total-send-price-text"></span>
+            </p>
+          </div>
+          <div class="cart__total-price">
+            <p class="cart__total-price-p">
+              Total a pagar: $<span class="cart__total-price-text"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <form class="form">
+        <h2 class="form__title">Agregue sus datos</h2>
+        <ul class="form__ul">
+          <li class="form__li">
+            <h3>Dirección</h3>
+            <input
+              type="text"
+              name="direction"
+              id="direction"
+              placeholder="Su dirección"
+            />
+          </li>
+          <li class="form__li">
+            <h3>Altura</h3>
+            <input
+              type="number"
+              name="height"
+              id="height"
+              placeholder="Altura de su calle"
+            />
+          </li>
+          <li class="form__li" id="homeContainer">
+            <input type="radio" name="house" id="house" />
+            <label for="house">Casa</label>
+            <input type="radio" name="department" id="department" />
+            <label for="department">Departamento</label>
+          </li>
+          <li class="form__li" id="floorContainer" style="display: none">
+            <h3>Piso</h3>
+            <input type="text" name="floor" id="floor" placeholder="Su piso" />
+          </li>
+          <li class="form__li">
+            <h3>Número de teléfono</h3>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Su número de teléfono"
+            />
+          </li>
+          <li class="form__li">
+            <h3>Con cuanto abona?</h3>
+            <input type="number" name="pay" id="pay" placeholder="Monto" />
+          </li>
+        </ul>
+        <div class="form__li-sendForm">
+          <input type="button" class="sendForm" id="sendForm" value="enviar" />
+        </div>
+      </form>
+      <div class="send" style="display: none">
+        <div class="send__container">
+          <div class="send__price">
+            <div class="send__img-container">
+              <img
+                class="send__img"
+                src="Images/Logo/Logo_wsp.svg"
+                alt="Logo de Wsp"
+              />
+            </div>
+            <div class="send__total">
+              <b>$</b><b class="send__total-text">0</b>
+              <div class="send__priceDelivery">
+                <b class="send__priceDelivery-text">0</b>
+              </div>
+            </div>
+          </div>
+          <div class="send__text">
+            <p>Terminar pedido</p>
+          </div>
+        </div>
+      </div>
+      <div class="nav__container">
+        <div class="nav__logo">
+          <img
+            class="nav__img"
+            src="Images/Logo/Logo_Italia.svg"
+            alt="Logo de Helados Italia"
+          />
+        </div>
+        <div class="nav__icons-container">
+          <div class="nav__cart-container">
+            <div class="nav__cart">
+              <img
+                class="nav__cart-img"
+                src="Images/Icon/Carrito_icono.svg"
+                alt="Icono de carrito en SVG"
+              />
+              <div class="nav__cart-accountant">
+                <p><b class="nav__cart-accountant-text"></b></p>
+              </div>
+            </div>
+          </div>
+          <div class="nav__menu-container">
+            <div class="nav__menu">
+              <img
+                class="nav__menu-img"
+                src="Images/Icon/menu.svg"
+                alt="Icono de menú en SVG"
+              />
+            </div>
+            <div class="nav__menu-ul-container">
+              <ul class="nav__menu-ul">
+                <li class="nav__menu-li beginning-button">Inicio</li>
+                <li class="nav__menu-li flavors-button">Sabores</li>
+                <li class="nav__menu-li local-button">Locales</li>
+                <li class="nav__menu-li order-button">Pedido</li>
+                <li class="nav__menu-li history-button">Historia</li>
+              </ul>
+              <img
+                src="Images/Others/italiaMap.svg"
+                class="nav_menu-map"
+                alt="Mapa de italia"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main id="main">
+      <section class="banner">
+        <video
+          class="banner__video"
+          loop
+          playsinline
+          autoplay
+          muted
+          src="Video/sambayon.mp4"
+        ></video>
+
+        <div class="icon-arrow">
+          <a class="icon-arrow__a" href="#hr"
+            ><img
+              class="icon-arrow__img"
+              src="Images/Icon/Arrow_white.svg"
+              alt="Flecha hacia abajo"
+          /></a>
+        </div>
+        <div class="banner__title">
+          <h1 class="banner__h1">Provare per credere</h1>
+          <p class="banner__p">-desde 1972-</p>
+        </div>
+        <div class="icon-audio">
+          <img
+            class="icon-audio__img-muted"
+            src="Images/Icon/Muted.svg"
+            alt="Icono de sonido muteado en SVG"
+          />
+          <img
+            class="icon-audio__img-unmuted icon-audio__img-oculted"
+            src="Images/Icon/Unmuted.svg"
+            alt="Icono de sonido en SVG"
+          />
+        </div>
+      </section>
+      <hr id="hr" />
+      <div class="information-container">
+        <section class="order-container">
+          <section>
+            <!--Solucion para cargar flecha hacia abajo al recargar pagina-->
+            <img
+              src="Images/Icon/Arrow_black.svg"
+              alt=""
+              style="display: none"
+            />
+          </section>
+          <section class="local">
+            <div class="local__title">
+              <h2>SUCURSALES</h2>
+              <p>Elige la mejor para ti</p>
+            </div>
+            <div class="local__container"></div>
+          </section>
+          <section class="shop"></section>
+        </section>
+      </div>
+    </main>
+    <footer id="footer">
+      <h4>Gracias por visitarnos</h4>
+      <p>Derechos reservados</p>
+      <p>Hola paulis :D</p>
+    </footer>
+    <!--JavaScript-->
+    <script src="Js/createVar.js"></script>
+    <script src="Js/charge.js"></script>
+    <script src="Js/shopCreate.js"></script>
+    <script src="Js/functions.js"></script>
+    <script src="Js/nav.js"></script>
+    <script>
+      window.onload = function () {
+        closeCharge();
+        console.log("DOM cargado");
+      };
+    </script>
+  </body>
+</html>
