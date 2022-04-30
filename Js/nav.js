@@ -1,5 +1,5 @@
 const navMenu = document.querySelector(".nav__menu-img");
-const navUlContainer = document.querySelector(".nav__menu-ul-container");
+const navUlContainer = document.querySelector(".nav__menu-banner");
 
 navMenu.addEventListener("click", openNavMenu);
 

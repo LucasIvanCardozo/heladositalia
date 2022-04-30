@@ -63,7 +63,7 @@
   padding: 10px;
   cursor: pointer;
 }
-.nav__menu-ul-container {
+.nav__menu-banner {
   height: calc(100vh - 60px);
   background-color: #fff;
   width: 200px;
@@ -89,11 +89,19 @@
 .nav__menu-li:hover {
   cursor: pointer;
 }
-.nav_menu-map {
-  position: absolute;
-  bottom: 40px;
-  filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
-    drop-shadow(4px 4px 1px #444);
+.nav__menu-networks{
+position: absolute;
+bottom: 0;
+right: 0;
+display: flex;
+}
+.nav__menu-networks-img-container{
+  height: 15px;
+  margin: 5px 5px;
+}
+.nav__menu-networks-img{
+  height: 100%;
+  width: 100%;
 }
 .nav__cart-container {
   height: 100%;
