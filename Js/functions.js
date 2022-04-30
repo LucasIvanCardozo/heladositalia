@@ -4,14 +4,14 @@ function stopPropagation(e) {
 
 function openPage() {
   navBackground.style.visibility = "visible";
-  main.style.filter = "grayscale(.3) blur(1px)";
-  footer.style.filter = "grayscale(.3) blur(1px)";
+  main.style.filter = "brightness(.5)";
+  footer.style.filter = "brightness(.5)";
   body.classList.add("block-scroll");
 }
 function closePage() {
   navBackground.style.visibility = "hidden";
-  main.style.filter = "grayscale(0) blur(0)";
-  footer.style.filter = "grayscale(0) blur(0)";
+  main.style.filter = "brightness(1)";
+  footer.style.filter = "brightness(1)";
   body.classList.remove("block-scroll");
 }
 function closeFlavors() {
