@@ -122,7 +122,7 @@ display: flex;
 }
 
 #main {
-  filter: grayscale(0);
+  filter: brightness(1);
   padding-top: 60px;
   transition: filter 0.4s;
 }
@@ -229,8 +229,9 @@ display: flex;
   height: auto;
   padding: 3px 0 10px 0;
   width: 100%;
+  filter: brightness(1);
   background-color: rgb(48, 48, 48);
-  transition: filter 0.2s;
+  transition: filter 0.4s;
 }
 
 .form {
