@@ -23,7 +23,7 @@ function closeFlavors() {
   setTimeout(function () {
     const flavors__ul = document.querySelector(".flavors__ul");
     if (flavors__ul !== null) {
-      flavors__container.removeChild(flavors__ul);
+      flavorsUlContainer.removeChild(flavors__ul);
     }
   }, 400);
 }

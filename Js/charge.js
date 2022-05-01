@@ -197,13 +197,9 @@ function createLocal() {
         validation = propertiesList.name;
         emptyShop();
         createTitle(element);
-        createShop(element);
-        if (servicesList.rappi) {
-          creatRappi(rappi);
-        }
-      } else {
-        alert("Esta eligiendo el mismo local");
-      }
+        if (servicesList.wsp) createShop(element);
+        if (servicesList.rappi) creatRappi(rappi);
+      } else alert("Esta eligiendo el mismo local");
     });
 
     localImgContainer.appendChild(localImg);

@@ -266,7 +266,7 @@ function createShop(arrayLocal) {
             flavorLabel.appendChild(flavorCheck);
             flavor.appendChild(flavorLabel);
             flavors__ul.appendChild(flavor);
-            flavors__container.appendChild(flavors__ul);
+            flavorsUlContainer.appendChild(flavors__ul);
           });
 
           flavors__container.style.display = "flex";

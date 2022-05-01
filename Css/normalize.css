@@ -9,6 +9,8 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 :root {
+  --redLogo: rgba(255, 35, 43);
+  --greenLogo: rgba(0, 142, 51);
   --transition: 1s;
   --short-transition: 0.3s;
 }

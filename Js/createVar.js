@@ -2,6 +2,7 @@
 const totalShop = document.querySelector(".shop");
 const flavors = document.querySelector(".flavors");
 const flavors__container = document.querySelector(".flavors__container");
+const flavorsUlContainer = document.querySelector(".flavors__ul-container");
 const body = document.getElementById("body");
 const nav = document.querySelector(".nav");
 const navBackground = document.querySelector(".nav__background");
