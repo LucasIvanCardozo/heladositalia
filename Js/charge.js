@@ -248,15 +248,12 @@ function creatRappi(link) {
 function createForm() {
   //enviar todos los datos al Wsp
   sendForm.addEventListener("click", getData);
-  house.addEventListener("click", home);
-  department.addEventListener("click", home);
+  homeContainer.addEventListener("click", home);
   //cambiar valor de depto o casa en el formulario
   function home(e) {
-    if (e.target.id == "house") {
-      department.checked = false;
+    if (e.target.value == "house") {
       floorContainer.style = "display: none";
-    } else {
-      house.checked = false;
+    } else if (e.target.value == "department") {
       floorContainer.style = "display: block";
     }
   }
@@ -264,40 +261,16 @@ function createForm() {
   function getData() {
     // verifica que los campos esten todos completos
     if (direction.value == "") {
-      direction.style = "border-color: red";
-      setTimeout(() => {
-        direction.style = "border-color: -internal-light-dark(black, white)";
-      }, 900);
       return;
     } else if (height.value == "") {
-      height.style = "border-color: red";
-      setTimeout(() => {
-        height.style = "border-color: -internal-light-dark(black, white)";
-      }, 900);
       return;
     } else if (house.checked == false && department.checked == false) {
-      homeConteniner.style = `color: red`;
-      setTimeout(() => {
-        homeConteniner.style = `color: none`;
-      }, 900);
       return;
     } else if (floor.value == "" && department.checked == true) {
-      floor.style = "border-color: red";
-      setTimeout(() => {
-        floor.style = "border-color: -internal-light-dark(black, white)";
-      }, 900);
       return;
     } else if (phone.value == "") {
-      phone.style = "border-color: red";
-      setTimeout(() => {
-        phone.style = "border-color: -internal-light-dark(black, white)";
-      }, 900);
       return;
     } else if (pay.value == "") {
-      pay.style = "border-color: red";
-      setTimeout(() => {
-        pay.style = "border-color: -internal-light-dark(black, white)";
-      }, 900);
       return;
     } else if (pay.value < totalPrice + shippingPrice) {
       pay.style = "border-color: red";

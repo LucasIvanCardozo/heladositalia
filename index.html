@@ -44,53 +44,92 @@
           </div>
         </div>
       </div>
-      <form class="form">
+      <form class="form" action="#">
         <h2 class="form__title">Agregue sus datos</h2>
         <ul class="form__ul">
           <li class="form__li">
-            <h3>Dirección</h3>
-            <input
-              type="text"
-              name="direction"
-              id="direction"
-              placeholder="Su dirección"
-            />
+            <label
+              ><h3>Dirección</h3>
+              <input
+                type="text"
+                id="direction"
+                name="direction"
+                placeholder="Su dirección"
+                required
+              />
+            </label>
           </li>
           <li class="form__li">
-            <h3>Altura</h3>
-            <input
-              type="number"
-              name="height"
-              id="height"
-              placeholder="Altura de su calle"
-            />
+            <label
+              ><h3>Altura</h3>
+              <input
+                id="height"
+                type="number"
+                name="height"
+                placeholder="Altura de su calle"
+                required
+              />
+            </label>
           </li>
           <li class="form__li" id="homeContainer">
-            <input type="radio" name="house" id="house" />
-            <label for="house">Casa</label>
-            <input type="radio" name="department" id="department" />
-            <label for="department">Departamento</label>
+            <label
+              ><input
+                type="radio"
+                name="house-department"
+                value="house"
+                id="house"
+                required
+              />Casa</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="house-department"
+                value="department"
+                id="department"
+                required
+              />Departamento</label
+            >
           </li>
           <li class="form__li" id="floorContainer" style="display: none">
-            <h3>Piso</h3>
-            <input type="text" name="floor" id="floor" placeholder="Su piso" />
+            <label>
+              <h3>Piso</h3>
+              <input
+                type="text"
+                id="floor"
+                name="floor"
+                placeholder="Su piso"
+                required
+              />
+            </label>
           </li>
           <li class="form__li">
-            <h3>Número de teléfono</h3>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="Su número de teléfono"
-            />
+            <label
+              ><h3>Número de teléfono</h3>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Su número de teléfono"
+                required
+              />
+            </label>
           </li>
           <li class="form__li">
-            <h3>Con cuanto abona?</h3>
-            <input type="number" name="pay" id="pay" placeholder="Monto" />
+            <label
+              ><h3>Con cuanto abona?</h3>
+              <input
+                type="number"
+                id="pay"
+                name="pay"
+                placeholder="Monto"
+                required
+              />
+            </label>
           </li>
         </ul>
         <div class="form__li-sendForm">
-          <input type="button" class="sendForm" id="sendForm" value="enviar" />
+          <input type="submit" class="sendForm" id="sendForm" value="enviar" />
         </div>
       </form>
       <div class="send" style="display: none">
@@ -153,9 +192,27 @@
                 <li class="nav__menu-li history-button">Historia</li>
               </ul>
               <div class="nav__menu-networks">
-                  <div class="nav__menu-networks-img-container"><img class="nav__menu-networks-img instagramLink" src="Images/Icon/instagram_icon.svg" alt="Logo Instagram-svg"></div>
-                  <div class="nav__menu-networks-img-container"><img class="nav__menu-networks-img facebookLink" src="Images/Icon/facebook_icon.svg" alt="Logo Facebook-svg"></div>
-                  <div class="nav__menu-networks-img-container"><img class="nav__menu-networks-img whatsappLink" src="Images/Icon/whatsapp_icon.svg" alt="Logo Whatsapp-svg"></div> 
+                <div class="nav__menu-networks-img-container">
+                  <img
+                    class="nav__menu-networks-img instagramLink"
+                    src="Images/Icon/instagram_icon.svg"
+                    alt="Logo Instagram-svg"
+                  />
+                </div>
+                <div class="nav__menu-networks-img-container">
+                  <img
+                    class="nav__menu-networks-img facebookLink"
+                    src="Images/Icon/facebook_icon.svg"
+                    alt="Logo Facebook-svg"
+                  />
+                </div>
+                <div class="nav__menu-networks-img-container">
+                  <img
+                    class="nav__menu-networks-img whatsappLink"
+                    src="Images/Icon/whatsapp_icon.svg"
+                    alt="Logo Whatsapp-svg"
+                  />
+                </div>
               </div>
             </div>
           </div>

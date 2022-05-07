@@ -47,7 +47,7 @@ function openCart() {
   navBackground.addEventListener("click", closeCart);
   openPage();
   cart.style.transition = "transform 0.4s ease-out";
-  cart.style.transform = "translateX(-300px)";
+  cart.style.transform = "translateX(-100%)";
   windowsOpen = true;
 }
 
@@ -77,7 +77,7 @@ function completeForm() {
   wspContainer.style.opacity = "0";
   openPage();
   form.style.transition = "transform 0.4s ease-out";
-  form.style.transform = "translateX(-300px)";
+  form.style.transform = "translateX(-100%)";
   windowsOpen = true;
 }
 
