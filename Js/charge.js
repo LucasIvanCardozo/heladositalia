@@ -307,7 +307,7 @@ function createForm() {
     }
 
     orderComplete = encodeURI(orderComplete);
-    location.assign(`https://wa.me/+5492235319564?text=${orderComplete}`);
+    location.assign(`https://wa.me/+5492233513948?text=${orderComplete}`);
   }
 }
 
