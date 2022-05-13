@@ -24,32 +24,17 @@ function audioPrepare() {
   });
 }
 //se ejecuta luego de que se cargue la pagina
-var getJSON = function (url, callback) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
-  xhr.responseType = "json";
-  xhr.onload = function () {
-    var status = xhr.status;
-    if (status === 200) {
-      callback(null, xhr.response);
-    } else {
-      callback(status, xhr.response);
-    }
-  };
-  xhr.send();
-};
-getJSON(
-  "https://script.google.com/macros/s/AKfycbyHiimg-ZcKURWe1joMmlKaVpI0KCTL3IZbmBjdSLe0rh9nugDNaNyDdELHwRLxiIUOFA/exec",
-  function (err, data) {
-    if (err !== null) {
-      alert("Error al cargar base de datos: " + err);
-    } else {
-      productos = data;
-      console.log("se obtuvieron todos los datos con exito");
-      createPage();
-    }
-  }
-);
+fetch(
+  "https://script.google.com/macros/s/AKfycbyHiimg-ZcKURWe1joMmlKaVpI0KCTL3IZbmBjdSLe0rh9nugDNaNyDdELHwRLxiIUOFA/exec"
+)
+  .then((res) => res.json())
+  .then((res) => startShop(res));
+
+function startShop(props) {
+  productos = props;
+  console.log(props);
+  createPage();
+}
 
 function createPage() {
   createLocal();
