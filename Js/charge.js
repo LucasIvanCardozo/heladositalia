@@ -33,10 +33,6 @@ fetch(
 function startShop(props) {
   productos = props;
   console.log(props);
-  createPage();
-}
-
-function createPage() {
   createLocal();
   console.log("se crearon los locales con exito");
   createForm();
@@ -236,12 +232,89 @@ function createForm() {
   homeContainer.addEventListener("click", home);
   //cambiar valor de depto o casa en el formulario
   function home(e) {
-    if (e.target.value == "house") {
-      floorContainer.style = "display: none";
-    } else if (e.target.value == "department") {
-      floorContainer.style = "display: block";
-    }
+    e.target.value == "house"
+      ? ((floorContainer.style = "display: none"),
+        floor.removeAttribute("required", ""))
+      : e.target.value == "department"
+      ? ((floorContainer.style = "display: block"),
+        floor.setAttribute("required", ""))
+      : "";
   }
+
+  let A = [-57.572019, -38.019065];
+  let B = [-57.545151, -37.985564];
+  let C = [-57.520518, -38.016336];
+  let D = [-57.545012, -38.039945];
+  let sumAngulos;
+  const poligono = [A, B, C, D];
+  console.log(check(poligono, [-57.544813, -38.037646]));
+  function check(poligono, punto) {
+    let vector1;
+    let vector2;
+    const Px = punto[0];
+    const Py = punto[1];
+    sumAngulos = 0;
+    for (let i = 0; i < poligono.length; i++) {
+      console.log("vuelta ", i + 1);
+      let Ax = poligono[i][0];
+      let Ay = poligono[i][1];
+      let Bx;
+      let By;
+      vector1 = poligono[i];
+      i + 1 == poligono.length
+        ? ((vector2 = poligono[0]),
+          (Bx = poligono[0][0]),
+          (By = poligono[0][1]))
+        : ((vector2 = poligono[i + 1]),
+          (Bx = poligono[i + 1][0]),
+          (By = poligono[i + 1][1]));
+      console.log("pares usados: ", Ax, " ", Ay, "/ ", Bx, " ", By);
+      let M = [Ax - Px, Ay - Py];
+      console.log("M:", M);
+      let N = [Bx - Px, By - Py];
+      console.log("N:", N);
+      let prodEscalar = M[0] * N[0] + M[1] * N[1];
+      console.log("Producto escalar M.N: ", prodEscalar);
+      let moduloM = Math.sqrt(Math.pow(M[0], 2) + Math.pow(M[1], 2));
+      console.log("Modulo de M: ", moduloM);
+      let moduloN = Math.sqrt(Math.pow(N[0], 2) + Math.pow(N[1], 2));
+      console.log("Modulo de N: ", moduloN);
+      console.log("cos angulo:", prodEscalar / (moduloM * moduloN));
+      sumAngulos =
+        sumAngulos +
+        (Math.acos(prodEscalar / (moduloM * moduloN)) * 180) / Math.PI;
+      console.log(
+        "angulo: ",
+        (Math.acos(prodEscalar / (moduloM * moduloN)) * 180) / Math.PI
+      );
+      console.log("suma de angulos numero: ", sumAngulos);
+    }
+    console.log("2pi: ", Math.PI + Math.PI);
+    console.log(sumAngulos <= 361 && sumAngulos >= 359);
+    return sumAngulos;
+  }
+  function validarDireccion() {
+    let geocoder = new google.maps.Geocoder();
+    let direccion =
+      direction.value + " " + height.value + " mar del plata argentina";
+    let error;
+    geocoder.geocode(
+      {
+        address: direccion,
+      },
+      function (result, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          console.log(result[0].geometry.location.lat());
+          error = false;
+        } else {
+          error = true;
+        }
+      }
+    );
+    if (error) return true;
+    else return false;
+  }
+
   //tomar valores y lso envia al wsp
   function getData() {
     // verifica que los campos esten todos completos
@@ -269,6 +342,7 @@ function createForm() {
       }, 900);
       return;
     }
+    if (validarDireccion()) return;
     if (house.checked == false) {
       orderComplete = `Dirección:\n${direction.value} ${height.value}\nPiso:\n${
         floor.value
