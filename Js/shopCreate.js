@@ -312,7 +312,6 @@ function createShop(arrayLocal) {
     const selectProducts = document.querySelector(
       `.products__items-container.${categoryNameMinus}`
     );
-    console.log(selectProducts);
 
     // abrir productos con transicion
     function openProducts() {
