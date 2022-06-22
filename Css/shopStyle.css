@@ -37,6 +37,7 @@
 }
 .flavors__img {
   width: 40px;
+  filter: brightness(1.25);
 }
 .flavors__text {
   padding: 0 5px;
