@@ -151,25 +151,25 @@
             return;
           }
           if (house.checked == false) {
-            orderComplete = `Dirección:\n${direction.value} ${
+            orderComplete = `*Dirección:*\n${direction.value} ${
               height.value
-            }\nPiso:\n${floor.value}\nTeléfono:\n${
+            }\n*Piso:*\n${floor.value}\n*Teléfono:*\n${
               phone.value
-            }\nPedido:\n${order}Costo de envío: $${shippingPrice}\nCant. Articulos:${
+            }\n*Pedido:*\n${order}_Costo de envío:_ $${shippingPrice}\n_Cant. Articulos:_ ${
               cartAccountant.textContent
-            }\nTotal del pedido: $${totalPrice + shippingPrice}\nAbona con: $${
-              pay.value
-            }`;
+            }\n*Total del pedido:* $${
+              totalPrice + shippingPrice
+            }\n*Abona con:* $${pay.value}`;
           } else {
-            orderComplete = `Dirección:\n${direction.value} ${
+            orderComplete = `*Dirección:*\n${direction.value} ${
               height.value
-            } (Casa)\nTeléfono:\n${
+            } (Casa)\n*Teléfono:*\n${
               phone.value
-            }\nPedido:\n${order}Costo de envío: $${shippingPrice}\nCant. Articulos:${
+            }\n*Pedido:*\n${order}_Costo de envío:_ $${shippingPrice}\n_Cant. Articulos:_ ${
               cartAccountant.textContent
-            }\nTotal del pedido: $${totalPrice + shippingPrice}\nAbona con: $${
-              pay.value
-            }`;
+            }\n*Total del pedido:* $${
+              totalPrice + shippingPrice
+            }\n*Abona con:* $${pay.value}`;
           }
           let valError;
           validarDireccion()
@@ -177,7 +177,7 @@
               if (valError !== false) {
                 orderComplete = encodeURI(orderComplete);
                 location.assign(
-                  `https://wa.me/+5492233513948?text=${orderComplete}`
+                  `https://wa.me/+5492235433159?text=${orderComplete}`
                 );
               }
             })

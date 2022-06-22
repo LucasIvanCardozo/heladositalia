@@ -269,23 +269,23 @@ function createForm() {
     }
 
     if (house.checked == false) {
-      orderComplete = `Dirección:\n${direction.value} ${height.value}\nPiso:\n${
-        floor.value
-      }\nTeléfono:\n${
+      orderComplete = `*Dirección de:*\n${direction.value} ${
+        height.value
+      }\n*Piso:*\n${floor.value}\n*Teléfono:*\n${
         phone.value
-      }\nPedido:\n${order}Costo de envío: $${shippingPrice}\nCant. Articulos:${
+      }\n*Pedido:*\n${order}_Costo de envío:_ $${shippingPrice}\n_Cant. Articulos:_${
         cartAccountant.textContent
-      }\nTotal del pedido: $${totalPrice + shippingPrice}\nAbona con: $${
+      }\n*Total del pedido:* $${totalPrice + shippingPrice}\n*Abona con:* $${
         pay.value
       }`;
     } else {
-      orderComplete = `Dirección:\n${direction.value} ${
+      orderComplete = `*Dirección de:*\n${direction.value} ${
         height.value
-      } (Casa)\nTeléfono:\n${
+      } (Casa)\n*Teléfono:*\n${
         phone.value
-      }\nPedido:\n${order}Costo de envío: $${shippingPrice}\nCant. Articulos:${
+      }\n*Pedido:*\n${order}_Costo de envío:_ $${shippingPrice}\n_Cant. Articulos:_ ${
         cartAccountant.textContent
-      }\nTotal del pedido: $${totalPrice + shippingPrice}\nAbona con: $${
+      }\n*Total del pedido:* $${totalPrice + shippingPrice}\n*Abona con:* $${
         pay.value
       }`;
     }
