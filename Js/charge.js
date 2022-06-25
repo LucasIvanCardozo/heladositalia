@@ -28,7 +28,8 @@ fetch(
   "https://script.google.com/macros/s/AKfycbyHiimg-ZcKURWe1joMmlKaVpI0KCTL3IZbmBjdSLe0rh9nugDNaNyDdELHwRLxiIUOFA/exec"
 )
   .then((res) => res.json())
-  .then((res) => startShop(res));
+  .then((res) => startShop(res))
+  .catch((err) => console.log(err));
 
 function startShop(props) {
   productos = props;
