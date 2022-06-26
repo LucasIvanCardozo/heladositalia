@@ -25,7 +25,7 @@ function audioPrepare() {
 }
 //se ejecuta luego de que se cargue la pagina
 fetch(
-  "https://script.google.com/macros/s/AKfycbyHiimg-ZcKURWe1joMmlKaVpI0KCTL3IZbmBjdSLe0rh9nugDNaNyDdELHwRLxiIUOFA/exec"
+  "https://script.google.com/macros/s/AKfycbxKPHCQBNatWFczzY8hz1TNQrcyjrtXbhhdd0MXcK5S9hyaQcbVX6W2wYBoxunGODYLyw/exec"
 )
   .then((res) => res.json())
   .then((res) => startShop(res))
