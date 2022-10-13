@@ -127,7 +127,7 @@ form.onsubmit = function getData(event) {
   validarDireccion()
     .then((e) => {
       orderComplete = encodeURI(orderComplete);
-      location.assign(`https://wa.me/+5492235433159?text=${orderComplete}`);
+      location.assign(`https://wa.me/+5492235319564?text=${orderComplete}`);
     })
     .catch((error) => {
       alert(error);
