@@ -8,4 +8,4 @@ Implementando todo lo que he aprendido este último año de forma autodidacta. U
  Además, luego de que el cliente realice su pedido, este será llevado hacia el WhatsApp con un pedido ya creado automáticamente, listo para ser enviado a la empresa.
 
 # Acceso mediante link
- Para observar como va el desarrollo de esta página puedes hacerlo entrando al siguiente enlace: https://jodkas.github.io/heladositalia
+ Para observar como va el desarrollo de esta página puedes hacerlo entrando al siguiente enlace: https://lucasivancardozo.github.io/heladositalia
