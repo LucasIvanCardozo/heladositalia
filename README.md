@@ -1,11 +1,17 @@
 # MiProyectoHeladosItalia
- Mi primer gran proyecto para la empresa de helados "Helados Italia" situada en la ciudad de Mar del Plata.
 
-Implementando todo lo que he aprendido este último año de forma autodidacta. Utilizando HTML, CSS, JS y una base de datos en GoogleSheets.
+Este proyecto inicial fue desarrollado para la empresa "Helados Italia", ubicada en Mar del Plata, con el objetivo de centralizar y gestionar la información de sus productos y características.
 
-# Idea de la página
- La idea de este proyecto es poder recopilar todos los productos y características de una empresa en una simple hoja de cálculo de Google (GoogleSheets). Esto se hace para facilitarle el cambio de variables a la misma empresa, ya que podrán entenderlo y hacerlo ellos mismos, sin necesidad de tener conocimientos en programación.
- Además, luego de que el cliente realice su pedido, este será llevado hacia el WhatsApp con un pedido ya creado automáticamente, listo para ser enviado a la empresa.
+## Descripción
 
-# Acceso mediante link
- Para observar como va el desarrollo de esta página puedes hacerlo entrando al siguiente enlace: https://lucasivancardozo.github.io/heladositalia
+La solución se implementó utilizando HTML, CSS y JavaScript, y utiliza Google Sheets como base de datos. Esta elección permite que el personal de la heladería actualice la información de forma sencilla, sin necesidad de conocimientos técnicos avanzados. Además, al completar un pedido, se genera automáticamente un mensaje preconfigurado para WhatsApp, facilitando la comunicación directa con la heladería.
+
+## Características
+
+- **Gestión de productos:** La información se almacena y actualiza en una hoja de Google Sheets.
+- **Interfaz intuitiva:** Desarrollo de una interfaz web clara y fácil de usar.
+- **Automatización de pedidos:** Generación automática de un mensaje de WhatsApp con el pedido, listo para ser enviado.
+
+## Enlace de demostración
+
+[Helados Italia](https://lucasivancardozo.github.io/heladositalia)
