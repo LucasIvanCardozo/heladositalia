@@ -130,8 +130,11 @@ form.onsubmit = function getData(event) {
   }
   validarDireccion()
     .then((e) => {
-      orderComplete = encodeURI(orderComplete);
-      location.assign(`https://wa.me/+5492235319564?text=${orderComplete}`);
+      orderComplete = encodeURIComponent(orderComplete);
+      window.open(
+        `https://wa.me/+5492235319564?text=${orderComplete}`,
+        '_blank'
+      );
     })
     .catch((error) => {
       alert(error);
