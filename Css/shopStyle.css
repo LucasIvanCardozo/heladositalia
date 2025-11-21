@@ -218,11 +218,15 @@
 
 .products__button {
   position: absolute;
+  cursor: pointer;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   object-fit: contain;
-  transition: background-color 0.15s;
+  transition: box-shadow 0.1s;
+}
+
+.products__button:hover {
+  box-shadow: 1px 1px 1px #0003;
 }
 
 .products__price {

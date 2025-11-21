@@ -96,8 +96,8 @@
   display: flex;
 }
 .nav__menu-networks-img-container {
-  height: 15px;
-  margin: 5px 5px;
+  height: 25px;
+  margin: 10px 8px;
 }
 .nav__menu-networks-img {
   height: 100%;
@@ -259,7 +259,7 @@
 .form__li {
   margin: 5px 0;
 }
-.form__li input:not([type="radio"]) {
+.form__li input:not([type='radio']) {
   width: 100%;
 }
 .form__li-sendForm {
@@ -328,6 +328,7 @@
   background-color: rgb(250, 61, 34);
   height: 100px;
   overflow: hidden;
+  cursor: pointer;
 }
 .rappi__img {
   height: 100%;
