@@ -6,6 +6,8 @@ let D = [-57.545012, -38.039945];
 let sumAngulos;
 const poligono = [A, B, C, D];
 
+geocodeState = false;
+
 function check(poligono, punto) {
   let vector1;
   let vector2;
@@ -53,36 +55,38 @@ function validarDireccion() {
   let direccion = direction.value + height.value + ' mar del plata argentina';
 
   return new Promise((res, rej) => {
-    geocoder.geocode(
-      {
-        address: direccion,
-      },
-      function (result, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          let latitud = result[0].geometry.location.lat();
-          let longitud = result[0].geometry.location.lng();
-          console.log(result);
-          console.dir(result);
-          console.log({
-            direccion: direccion,
-            latitud: latitud,
-            longitud: longitud,
-          });
-          console.log(result[0].types[0]);
-          if (
-            result[0].types[0] != 'street_address' &&
-            result[0].types[0] != 'premise' &&
-            result[0].types[0] != 'subpremise'
-          )
-            rej('La direccion indicada no existe!');
-          else if (check(poligono, [longitud, latitud])) {
-            res(true);
-          } else rej('No llegamos hasta ese domicilio! Mil disculpas.');
-        } else {
-          rej('Error al analizar direccion! Por favor, intente de nuevo.');
+    if (geocodeState)
+      return geocoder.geocode(
+        {
+          address: direccion,
+        },
+        function (result, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            let latitud = result[0].geometry.location.lat();
+            let longitud = result[0].geometry.location.lng();
+            console.log(result);
+            console.dir(result);
+            console.log({
+              direccion: direccion,
+              latitud: latitud,
+              longitud: longitud,
+            });
+            console.log(result[0].types[0]);
+            if (
+              result[0].types[0] != 'street_address' &&
+              result[0].types[0] != 'premise' &&
+              result[0].types[0] != 'subpremise'
+            )
+              rej('La direccion indicada no existe!');
+            else if (check(poligono, [longitud, latitud])) {
+              res(true);
+            } else rej('No llegamos hasta ese domicilio! Mil disculpas.');
+          } else {
+            rej('Error al analizar direccion! Por favor, intente de nuevo.');
+          }
         }
-      }
-    );
+      );
+    else res(true);
   });
 }
 
