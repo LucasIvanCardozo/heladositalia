@@ -307,7 +307,6 @@
   padding: 0px 3px;
 }
 .send {
-  height: 50px;
   width: 100%;
   padding: 10px;
   position: fixed;
@@ -321,12 +320,19 @@
 .send__container {
   font-weight: bold;
   display: flex;
+  background-color: #6662;
+  justify-content: center;
+  align-items: center;
   font-size: 0.9rem;
+  padding: 2px 7px;
+  border-radius: 5px;
+  gap: 10px;
 }
 
 .send__text {
   color: #fff;
   display: flex;
+  cursor: pointer;
   background-color: rgb(83, 209, 78);
   padding: 5px;
   border-radius: 5px;
@@ -346,21 +352,26 @@
   margin-right: 10px;
   font-size: 1.6rem;
 }
+.send__total {
+  position: relative;
+  width: min-content;
+}
 
 .send__priceDelivery-text {
   color: #ff0000;
   position: absolute;
-  right: -4px;
+  right: -20%;
   bottom: -4px;
   font-size: 0.9rem;
 }
 .send__img-container {
-  height: 100%;
+  height: 35px;
   margin-right: 5px;
 }
 
 .send__img {
   height: 100%;
+  object-fit: contain;
   animation: animWsp 1.3s ease 0s 1 normal forwards;
 }
 
